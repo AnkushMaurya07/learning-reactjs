@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import { useState, useCallback, useEffect, useRef } from "react";
-
 import "./App.css";
 
 function App() {
@@ -25,10 +24,13 @@ function App() {
     }
 
     setPassword(pass);
+
   }, [length, numberAllowed, charAllowed, setPassword]);
 
   useEffect(() => {
+
     passwordGenerator();
+    
   }, [length, numberAllowed, charAllowed, passwordGenerator]);
 
   const copyPasswordToClipboard = useCallback(() => {
