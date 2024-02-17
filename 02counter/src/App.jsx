@@ -12,6 +12,7 @@ function App() {
     console.log("Clicked", Math.random());
     // counter = counter + 1;
     if (counter < 20) {
+
       
       setCounter(counter + 1);
       // console.log(counter);
