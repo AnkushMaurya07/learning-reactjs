@@ -74,6 +74,7 @@ function App() {
       >
         <img
           className="w-56 h-40 flex justify-center"
+          
           src="https://cdn.pixabay.com/photo/2023/05/13/16/31/ashok-chakra-7990878_1280.png"
           alt="Bike image was here"
         />
