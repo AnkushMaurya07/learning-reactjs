@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useId } from "react";
 function InputBox({
   //to display where we are passing from/to
