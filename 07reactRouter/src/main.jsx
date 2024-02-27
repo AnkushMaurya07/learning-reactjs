@@ -14,6 +14,7 @@ import About from "./components/About/About.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import User from "./components/User/User.jsx";
 import Github, { githubInfoLoader } from "./components/Github/Github.jsx";
+import Login from "./components/Login/Login.jsx";
 
 //How to make router-----Two ways to make a router
 
@@ -49,16 +50,12 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
       <Route path="user/:userid" element={<User />} />
-      
-      <Route
-      loader={githubInfoLoader} 
-      path="github" 
-      element={<Github />}
-       />
+      <Route path="login" element={<Login />} />
+
+      <Route loader={githubInfoLoader} path="github" element={<Github />} />
     </Route>
   )
 );
-
 
 //RouterProvider takes in a prop
 ReactDOM.createRoot(document.getElementById("root")).render(
