@@ -3,9 +3,9 @@ import React from "react";
 function Login() {
   return (
     <>
-      <div className="h-96 w-full bg-lime-400 text-3xl ">
+      <div className="h-96 w-9/12 ml-32 bg-slate-400 text-3xl flex-col rounded-xl ">
         Login Page
-        <table className="border-zinc-900 border-4">
+        <table className="border-zinc-200 border- ml-48 mt-6">
           <tr>
             <td>Name:</td>
             <td>
@@ -25,7 +25,9 @@ function Login() {
             </td>
           </tr>
         </table>
-        <button className="h-8 w-32 bg-orange-900 rounded-full ">SUBMIT</button>
+        <button className="h-8 w-32 bg-orange-900 rounded-full mt-10 ">
+          SUBMIT
+        </button>
       </div>
     </>
   );
