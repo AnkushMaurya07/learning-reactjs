@@ -1,12 +1,14 @@
 /* eslint-disable no-useless-catch */
-import conf from "../config/conf";
+import conf from "../config/conf.js";
 
 import { Client, Account, ID } from "appwrite"
 
 export class AuthServices {
+    //to make a new client
     client = new Client();
     account; //firstly we have to make endpoint and proj in Client.
 
+    //
     constructor() {
         this.client
             .setEndpoint(conf.appwriteURL)
@@ -15,7 +17,8 @@ export class AuthServices {
     }
 
     //making a method here so that it can call the appwrite services basically a wrapper.
-    //which is a promise
+    //which is a promise----using a promise--or async await.
+
 
     async createAccount({ email, password, name }) {
         try {
@@ -34,6 +37,7 @@ export class AuthServices {
 
     }
 
+    //make a login method so that we can enter the desired login details.
     async login({ email, password }) {
         try {
             return await this.account.createEmailSession(email, password);
@@ -49,7 +53,7 @@ export class AuthServices {
             return await this.account.get()
         }
         catch (error) {
-            console.log("Appwrite service:: error", error);
+            console.log("Appwrite service::getCurrentUser:: error", error);
         }
         return null;
     }
@@ -62,8 +66,8 @@ export class AuthServices {
         }
     }
 
+}
 
-
-    const authServices = new AuthServices()
+const authServices = new AuthServices()
 
 export default authServices;

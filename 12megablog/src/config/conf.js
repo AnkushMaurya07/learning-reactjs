@@ -1,4 +1,7 @@
+//URL variables
+
 //Export key value pairs inside the conf variable
+//Here we are accessing the values of the env variable and storing inside a variable, which can be  used later in the project.
 
 const conf = {
 
