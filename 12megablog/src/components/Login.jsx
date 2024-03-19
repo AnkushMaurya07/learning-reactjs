@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { login as authlogin } from "../store/authSlice";
 import { Button, Input, Logo } from "./index";
-import { UseDispatch, useDispatch } from "react-redux";
-import authService from "../appwrite";
+import {  useDispatch } from "react-redux";
+import authService from "../appwrite/auth";
 import { useForm } from "react-hook-form";
 
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
+  const [error, setError] = useState("")
 
   const login = async (data) => {
     //for cleaning the errors
-    setError("");
+    setError("")
 
     try {
       const session = await authService.login(data);
@@ -43,7 +44,7 @@ function Login() {
           Sign-in to your account
         </h2>
         <p>
-          Don't have an account?
+          Do not have an account?
           <Link
             to="/signup"
             className="font-medium text-primary transition-all duration-200 hover:underline"

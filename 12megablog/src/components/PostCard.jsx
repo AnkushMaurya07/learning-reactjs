@@ -2,11 +2,8 @@ import React from "react";
 import appwriteService from "../appwrite/config";
 import { Link } from "react-router-dom";
 
-function PostCard({ 
-    $id,
-title,
-featuredImage
-}) {
+function PostCard({$id,title,featuredImage})
+{
   return (
     //we don't have to provide whole url--we can start from where we are.
     <Link to={`/post/${$id}`}>
@@ -21,5 +18,5 @@ featuredImage
         </div>
     </Link>
   )
-
+}
 export default PostCard;

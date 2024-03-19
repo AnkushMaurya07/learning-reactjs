@@ -46,8 +46,8 @@ export class AuthServices {
         }
 
     }
+   
     //this method can fail also so we use try n catch.
-
     async getCurrentUser() {
         try {
             return await this.account.get()
@@ -70,4 +70,4 @@ export class AuthServices {
 
 const authServices = new AuthServices()
 
-export default authServices;
+export default authServices
